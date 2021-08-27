@@ -117,6 +117,9 @@ void MainWindow::loopExec(int mec)
 
 void MainWindow::slotBtnStartClick()
 {
+    qDebug()<<"QSslSocket="<<QSslSocket::sslLibraryBuildVersionString();
+    qDebug() << "OpenSSL支持情况:" << QSslSocket::supportsSsl();
+
     if(editUrl->text() == "")
     {
         editText->append(QDateTime::currentDateTime().toString("yyyy-MM-dd  hh:mm:ss   \n") + ASA_NET_TEXT_ERROR_STRING);
@@ -131,9 +134,23 @@ void MainWindow::slotBtnStartClick()
             editText->append(QDateTime::currentDateTime().toString("yyyy-MM-dd  hh:mm:ss   \n") + ASA_NET_TEXT_ERROR_STRING_1);
         }else{
             editText->setPlainText(strRet);
+            slotTransferString2File(strRet,"C:/Users/AsaGlory/Desktop/Asa/AsaWorking/Prj/QtGetNetInfo/netInfo.txt");
 //            editText->append(strRet);
         }
     }
+}
+
+void MainWindow::slotTransferString2File(const QString &strData, const QString &strFilePath)
+{
+    QFile file(strFilePath);
+
+    file.setFileName(strFilePath);
+    if(file.open(QIODevice::WriteOnly | QIODevice::Text)){
+        file.write(strData.toStdString().c_str());
+        file.close();
+    }
+
+    return;
 }
 
 QString MainWindow::slotGetInfo(QString strUrl)

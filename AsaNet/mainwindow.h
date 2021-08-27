@@ -31,6 +31,8 @@ private:
 
 public slots:
     void slotBtnStartClick();
+    void slotTransferString2File(const QString & strData , const QString & strFilePath);
+
     QString slotGetInfo(QString strUrl);
 };
 

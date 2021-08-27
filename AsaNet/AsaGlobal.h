@@ -2,6 +2,7 @@
 #define ASAGLOBAL_H
 
 #include <QUrl>
+#include <QFile>
 #include <QTimer>
 #include <QFrame>
 #include <QTextEdit>
