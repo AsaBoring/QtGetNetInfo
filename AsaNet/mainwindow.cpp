@@ -135,7 +135,6 @@ void MainWindow::slotBtnStartClick()
         }else{
             editText->setPlainText(strRet);
             slotTransferString2File(strRet,"C:/Users/AsaGlory/Desktop/Asa/AsaWorking/Prj/QtGetNetInfo/netInfo.txt");
-//            editText->append(strRet);
         }
     }
 }
