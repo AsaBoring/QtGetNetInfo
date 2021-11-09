@@ -40,4 +40,6 @@
 #define ASA_NET_BTN_URL_LABEL_STYLESHEET        QString("background-color:white;color:black;border:none")
 #define ASA_NET_BTN_START_STYLESHEET_REVERSE    QString("background-color:white;color:black")
 
+#define ASA_NET_TARGET_WEB_SITE(a)              QString("https://www.e3sjmydvdo9w.com/xiazai/list-%E4%BA%9A%E6%B4%B2%E7%94%B5%E5%BD%B1-")+QString("%1").arg(a)+QString(".html")
+
 #endif // ASAGLOBAL_H

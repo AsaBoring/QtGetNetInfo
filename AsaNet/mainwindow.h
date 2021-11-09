@@ -34,6 +34,10 @@ public slots:
     void slotTransferString2File(const QString & strData , const QString & strFilePath);
 
     QString slotGetInfo(QString strUrl);
+
+    /*Process fot web site ASA_NET_TARGET_WEB_SITE*/
+    void slotFetchDownloadWebSiteFromWebInfo(const QString & strWebInfo , QStringList & slRet);
+    /**********************************************/
 };
 
 #endif // MAINWINDOW_H
